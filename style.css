@@ -3439,3 +3439,22 @@ img.size-smiley {
 		height: 190px
 	}
 }
+
+/*页面主框架padding调整*/
+
+#main{
+	padding-right: 10px;
+    padding-left: 10px;
+}
+
+#kratos-widget-area{
+	padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+
+
+
+
+
