@@ -3452,7 +3452,12 @@ img.size-smiley {
     padding-left: 10px;
 }
 
+/*代码块样式*/
 
+.pre{
+	background-color: #fafafa;
+	border: 1px solid #efefef;
+}
 
 
 
