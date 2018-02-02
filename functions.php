@@ -1102,3 +1102,41 @@ function kratos_admin_footer_text($text) {
 }
 
 add_filter('admin_footer_text', 'kratos_admin_footer_text');
+
+
+
+
+
+/* 
+ * 代码高亮设置
+ */
+function dangopress_esc_html($content)
+{
+    $regex = '/(<pre\s+[^>]*?class\s*?=\s*?[",\'].*?prettyprint.*?[",\'].*?>)(.*?)(<\/pre>)/sim';
+    return preg_replace_callback($regex, dangopress_esc_callback, $content);
+}
+
+function dangopress_esc_callback($matches)
+{
+    $tag_open = $matches[1];
+    $content = $matches[2];
+    $tag_close = $matches[3];
+
+    //$content = htmlspecialchars($content, ENT_NOQUOTES, get_bloginfo('charset'));
+    $content = esc_html($content);
+
+    return $tag_open . $content . $tag_close;
+}
+add_filter('the_content', 'dangopress_esc_html', 2);
+add_filter('comment_text', 'dangopress_esc_html', 2);
+
+function setup_load_script()
+{
+    // Register prettify.js
+    wp_enqueue_script('prettify-js', $url_prefix . '/js/prettify.js',
+                       array(), '20130504', true);
+}
+add_action('wp_enqueue_scripts', 'setup_load_script');
+
+
+
