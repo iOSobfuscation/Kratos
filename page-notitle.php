@@ -16,7 +16,7 @@ get_header('banner'); ?>
 	                </div>
 	            </aside>
 			<?php } ?>
-            <section id="main" class='<?php echo ($page_side_bar == 'single') ? 'col-md-12' : 'col-md-8'; ?>'>
+            <section id="main" class='<?php echo ($page_side_bar == 'single') ? 'col-md-12' : 'col-md-9'; ?>'>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article>
 					<div class="kratos-hentry kratos-post-inner clearfix">
@@ -46,7 +46,7 @@ get_header('banner'); ?>
 			<?php endwhile;?>
 			</section>
 			<?php if($page_side_bar == 'right_side'){ ?>
-			<aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
+			<aside id="kratos-widget-area" class="col-md-3 hidden-xs hidden-sm scrollspy">
                 <div id="sidebar">
                     <?php dynamic_sidebar('sidebar_tool'); ?>
                 </div>
