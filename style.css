@@ -3453,8 +3453,7 @@ img.size-smiley {
 }
 
 /*代码块样式*/
-
-.pre{
+pre{
 	background-color: #fafafa;
 	border: 1px solid #efefef;
 }
