@@ -26,7 +26,7 @@ body.kratos-offcanvas {
 }
 
 a {
-	color: #51aded;
+	color: #4EA1DB;
 	-webkit-transition: .5s;
 	-o-transition: .5s;
 	transition: .5s
@@ -34,7 +34,7 @@ a {
 
 a:hover {
 	text-decoration: none;
-	color: #51aded!important
+	color: #ca0c16
 }
 
 a:focus {
@@ -115,9 +115,7 @@ kbd {
 	background-color: #6c6c6c
 }
 
-article a {
-	color: #333
-}
+
 
 table,table tbody tr th {
 	text-align: center!important
@@ -856,9 +854,6 @@ table,table tbody tr th {
 	color: #51aded!important
 }
 
-article a {
-	color: #333
-}
 
 #slide {
 	margin-bottom: 20px
@@ -2052,9 +2047,12 @@ a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,but
 }
 
 .kratos-post-content p {
-	margin-bottom: 1em;
 	font-size: 16px;
-	color: #333
+    color: #4f4f4f;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0 0 16px;
+    text-align: justify;
 }
 
 .kratos-post-content img {
