@@ -95,15 +95,6 @@ blockquote p:only-child {
 	color: #080808
 }
 
-code {
-	padding: 2px 4px;
-	font-size: 90%;
-	color: #333;
-	background-color: #f8f8f8;
-	border-radius: 0;
-	/*border: 1px solid #E1E1E1;*/
-	margin: 0 5px
-}
 
 cite {
 	font-style: normal
