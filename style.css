@@ -3443,10 +3443,14 @@ img.size-smiley {
 
 /*代码块样式*/
 pre{
-	background-color: #fafafa;
+	background-color: #f6f8fa;
 	border: 1px solid #efefef;
+	font-size: 14px;
 }
 
+li{
+	font-weight: 400;
+}
 
 
 
