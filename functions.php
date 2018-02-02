@@ -1133,7 +1133,7 @@ function dangopress_esc_callback($matches)
 function setup_load_script()
 {
     // Register prettify.js
-    wp_enqueue_script('prettify-js', $url_prefix . 'js/prettify.js',
+    wp_enqueue_script('prettify-js', $url_prefix . '/wp-content/themes/Kratos/js/prettify.js',
                        array(), '20180202', true);
 }
 add_action('wp_enqueue_scripts', 'setup_load_script');
