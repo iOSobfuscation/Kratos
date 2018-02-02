@@ -1133,8 +1133,8 @@ add_filter('comment_text', 'dangopress_esc_html', 2);
 function setup_load_script()
 {
     // Register prettify.js
-    wp_enqueue_script('prettify-js', $url_prefix . '/js/prettify.js',
-                       array(), '20130504', true);
+    wp_enqueue_script('prettify-js', $url_prefix . 'js/prettify.js',
+                       array(), '20180202', true);
 }
 add_action('wp_enqueue_scripts', 'setup_load_script');
 
