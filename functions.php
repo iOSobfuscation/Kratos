@@ -1127,7 +1127,7 @@ function dangopress_esc_callback($matches)
 
     return $tag_open . $content . $tag_close;
 }
-add_filter('the_content', 'dangopress_esc_html', 2);
+// add_filter('the_content', 'dangopress_esc_html', 2);
 // add_filter('comment_text', 'dangopress_esc_html', 2);
 
 function setup_load_script()
