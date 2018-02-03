@@ -37,8 +37,8 @@ get_header('banner'); ?>
 					</div>
 						<?php if ( kratos_option( 'page_cc' ) ) : ?>
 						<div class="kratos-hentry kratos-copyright text-center clearfix">
-							<blockquote>本文采用 「<a href="//www.ludou.org/go/creativecommons" target="_blank">CC BY-NC-SA 4.0</a>」创作共享协议，转载请标注以下信息：<br>
-				               原文出处：露兜博客 <a title="WordPress文章目录插件" href="//www.ludou.org/wordpress-content-index-plugin.html">https://www.ludou.org/wordpress-content-index-plugin.html</a>
+							<blockquote>本文采用 「<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>」创作共享协议，转载请标注以下信息：<br>
+				               原文出处：周志鹏博客 <a title="WordPress文章目录插件" href="//www.ludou.org/wordpress-content-index-plugin.html">https://www.ludou.org/wordpress-content-index-plugin.html</a>
 				              </blockquote>
 						</div>
 						<?php endif; ?>

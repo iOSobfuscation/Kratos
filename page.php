@@ -43,8 +43,9 @@ get_header('banner'); ?>
 					</div>
 						<?php if ( kratos_option( 'page_cc' ) ) : ?>
 						<div class="kratos-hentry kratos-copyright text-center clearfix">
-							<img alt="知识共享许可协议" src="<?php echo get_template_directory_uri(); ?>/images/licenses.png">
-							<h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+							<blockquote>本文采用 「<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>」创作共享协议，转载请标注以下信息：<br>
+				               原文出处：周志鹏博客 <a title="WordPress文章目录插件" href="//www.ludou.org/wordpress-content-index-plugin.html">https://www.ludou.org/wordpress-content-index-plugin.html</a>
+				              </blockquote>
 						</div>
 						<?php endif; ?>
 						<?php comments_template(); ?>
