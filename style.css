@@ -1774,7 +1774,8 @@ a.comment-reply-link:hover {
 	color: #666;
 	text-transform: uppercase;
 	line-height: 19px;
-	font-size: 13px!important
+	font-size: 13px!important;
+    font-weight: 400;
 }
 
 .amadeus_recent_comments ul,.amadeus_recent_posts_widget ul {
