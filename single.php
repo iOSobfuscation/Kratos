@@ -66,7 +66,7 @@ get_header('banner'); ?>
 					<?php if ( kratos_option( 'post_cc' )==1 ) : ?>
 					<div class="kratos-hentry kratos-copyright text-center clearfix">
 						<div>本文采用 「<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>」创作共享协议，转载请标注以下信息：<br>
-				               原文出处：周志鹏博客 <a title="<?php echo wp_title(); ?>" href="<?php echo  home_url(add_query_arg(array())); ?>"><?php echo  home_url(add_query_arg(array())); ?></a>
+				               原文出处：周志鹏博客 <a title="<?php wp_title( '-', true, 'right' ); ?>" href="<?php echo  home_url(add_query_arg(array())); ?>"><?php echo  home_url(add_query_arg(array())); ?></a>
 			              </div>
 					</div>
 					<?php endif; ?>
