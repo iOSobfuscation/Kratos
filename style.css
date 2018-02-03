@@ -3461,6 +3461,52 @@ li{
 	font-weight: 400;
 }
 
+/*markdown table 样式*/
+table{
+	border-collapse: collapse;
+    display: table;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+    font-weight: 400;
+    color: #454545;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+table tr {
+    border: 0;
+    border-top: 1px solid #DDD;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+tr th {
+    font-weight: 700;
+    background-color: #eff3f5;
+    font-size: 14px;
+    color: #4f4f4f;
+    line-height: 22px;
+    border: 1px solid #DDD;
+    padding: 8px;
+    text-align: left;
+}
+
+tbody {
+    border: 0;
+}
+
+table tr td {
+    font-size: 14px;
+    color: #4f4f4f;
+    line-height: 22px;
+    border: 1px solid #DDD;
+    padding: 8px;
+    text-align: left;
+}
+
+
 
 
 
