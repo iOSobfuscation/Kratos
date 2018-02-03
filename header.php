@@ -21,8 +21,9 @@
 			</style>
 		<?php endif; ?>
 
-		<link href="<?php echo get_template_directory_uri() . '/favicon.ico'; ?>" rel="SHORTCUT ICON">
 
+		<link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/favicon.ico'; ?>"  type="image/x-icon" />
+		<link rel="Bookmark" href="<?php echo get_template_directory_uri() . '/favicon.ico'; ?>" />
 	</head>
 	<?php flush(); ?>
 	<body data-spy="scroll" data-target=".scrollspy">
