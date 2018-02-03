@@ -2459,6 +2459,18 @@ img.size-smiley {
 	height: auto!important
 }
 
+.kratos-copyright div{
+    border-left: 5px solid #2479CC;
+    overflow: hidden;
+    padding: 15px 20px;
+    text-align: left;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.8;
+    word-wrap: break-word;
+    font-weight: 400;
+}
+
 .kratos-copyright img {
 	margin-top: 20px
 }
@@ -2468,7 +2480,10 @@ img.size-smiley {
 }
 
 .kratos-copyright a {
-	color: #5a5a5a
+	outline: none;
+    color: #2479CC;
+    text-decoration: none;
+    background: transparent;
 }
 
 .kratos-entry-meta .byline {
