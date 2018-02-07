@@ -1104,7 +1104,39 @@ function kratos_admin_footer_text($text) {
 add_filter('admin_footer_text', 'kratos_admin_footer_text');
 
 
-
+/* 评论后发送邮件开始*/
+function  comment_mail_notify ($comment_id){
+    $admin_notify='1';
+    // admin 要不要收回复通知 ( '1'=要 ; '0'=不要 )
+    $admin_email=get_bloginfo ('admin_email');
+    // $admin_email 可改为你指定的 e-mail.
+    $comment=get_comment ($comment_id);
+    $comment_author_email=trim($comment->comment_author_email );
+    $parent_id=$comment->comment_parent ?$comment->comment_parent :
+    '';
+    global $wpdb;
+    if ($wpdb->query ("Describe {$wpdb->comments} comment_mail_notify")=='')$wpdb->query ("ALTER TABLE {$wpdb->comments} ADD COLUMN comment_mail_notify TINYINT NOT NULL DEFAULT 0;");
+    if (($comment_author_email!=$admin_email && isset($_POST['comment_mail_notify'])) || ($comment_author_email==$admin_email && $admin_notify=='1'))$wpdb->query ("UPDATE {$wpdb->comments} SET comment_mail_notify='1' WHERE comment_ID='$comment_id'");
+    $notify=$parent_id?get_comment ($parent_id)->comment_mail_notify :
+    '0';
+    $spam_confirmed=$comment->comment_approved ;
+    if ($parent_id!='' && $spam_confirmed!='spam' && $notify=='1'){
+        $wp_email='487042@'.preg_replace('#^www.#','',strtolower($_SERVER['SERVER_NAME']));
+        // e-mail 发出点, no-reply 可改为可用的 e-mail.
+        $to=trim(get_comment ($parent_id)->comment_author_email );
+        $subject='您在 ['.get_option ("blogname").'] 的留言有了回复';
+        $message='    <div style="background-color:#0088CC;height:35px;line-height:35px;color:#fff;font-weight:bold;padding-left:20px;border-radius:10px 10px 0 0">您在 ['.get_option ("blogname").'] 的留言有了新的回复</div>    <div style="border:1px solid #0088CC; color:#111;padding:0 20px;color:#686868;">      <p><span style="color:#CC0000;font-weight:bold">'.trim(get_comment ($parent_id)->comment_author ).'</span>，您好!</p>      <p>您曾在<span style="color:#CC0000;font-weight:bold">《'.get_the_title ($comment->comment_post_ID ).'》</span>的留言:</p><div style="margin:10px;border:1px solid #dfdfdf;padding:20px;color:#a0a0a0;">'.trim(get_comment ($parent_id)->comment_content ).'</div>      <p><span style="color:#CC0000;font-weight:bold">'.trim($comment->comment_author ).' </span>给您的回复:</p><div style="margin:10px;border:1px solid #dfdfdf;padding:20px;color:#a0a0a0;">'.trim($comment->comment_content ).'</div>      <p>您可以点此 <a href="'.get_permalink ($comment->comment_post_ID ).'" style="text-decoration:none;color:#a0a0a0;;">查看回复的完整內容</a></p>      <p>欢迎您再度光临：<a href="'.get_option ('home').'" style="text-decoration:none;color:#a0a0a0;;">'.get_option ('blogname').' ( '.get_option ('home').' )</a></p>    </div>    <div style="padding:20px;color:#fff;font-size:12px;background-color:#0088CC;border-radius:0 0 10px 10px">请注意：此邮件由[<span style="color:#bbb"> '.get_option ("blogname").'</span> ]自动发送，请勿回复<br>如果此邮件不是您请求的，请忽略并删除！</div>';
+        $from="From: \"".get_option ('blogname')."\" <$wp_email>";
+        $headers="$from\nContent-Type: text/html; charset=".get_option ('blog_charset')."\n";
+        wp_mail ($to,$subject,$message,$headers);
+    }
+}
+add_action ('comment_post','comment_mail_notify');
+/* 自动加勾选栏 */
+function  add_checkbox (){
+    echo '<input type="checkbox" name="comment_mail_notify" id="comment_mail_notify" value="comment_mail_notify" checked="checked" class="chk_1"/><label for="comment_mail_notify">有人回复时邮件通知我</label>';
+}
+add_action ('comment_form','add_checkbox');
 
 
 
