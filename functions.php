@@ -1104,7 +1104,13 @@ function kratos_admin_footer_text($text) {
 add_filter('admin_footer_text', 'kratos_admin_footer_text');
 
 
-
+/**
+ * markdown编辑器插入图片地址
+ */
+add_filter( 'image_send_to_editor', 'new_image_send_to_editor', 21, 8 );
+function new_image_send_to_editor( $html, $id, $caption, $title, $align, $url, $size, $alt ) {
+    return "![$alt]($url \"$caption\")";
+}
 
 
 
