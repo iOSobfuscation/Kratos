@@ -696,7 +696,7 @@ function comment_mail_notify($comment_id) {
                             </tbody>
                         </table>
                         <br>
-                    <div style="font-size:13px;color:#a0a0a0;padding-top:10px">该邮件由系统自动发出，如果不是您本人操作，请忽略此邮件。</div>
+                    <div style="font-size:13px;color:#a0a0a0;padding-top:10px">该邮件由系统自动发出，如果不是您本人操作，请忽略此邮件。(请将zhouzhipeng.com@gmail.com 邮箱加入白名单，以防止被您的邮箱加入垃圾箱中)</div>
                     <div class="qmSysSign" style="padding-top:20px;font-size:12px;color:#a0a0a0;">
                         <p style="color:#a0a0a0;line-height:18px;font-size:12px;margin:5px 0;">' . htmlspecialchars_decode(get_option('blogname'), ENT_QUOTES) . '</p>
                         <p style="color:#a0a0a0;line-height:18px;font-size:12px;margin:5px 0;"><span style="border-bottom:1px dashed #ccc;" t="5" times="">' . date("Y年m月d日",time()) . '</span></p>
