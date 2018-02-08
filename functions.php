@@ -1115,5 +1115,18 @@ function new_image_send_to_editor( $html, $id, $caption, $title, $align, $url, $
     return  "![](".$match[1].")";
 }
 
+/*
+ * 禁用快速编辑功能
+ * 否则会导致 Markdown 格式的文章内容变为 HTML 代码
+ */
+add_filter( 'post_row_actions', 'power_remove_row_actions', 10, 2 );
+function power_remove_row_actions( $actions )
+{
+    if( get_post_type() === 'post' ) {
+    unset( $actions['inline hide-if-no-js'] );
+    }
+    return $actions;
+}
+
 
 
