@@ -1112,7 +1112,7 @@ function new_image_send_to_editor( $html, $id, $caption, $title, $align, $url, $
     $match=[];
     preg_match('/src=[\'\"]?([^\'\"]*)[\'\"]?/i',$html,$match); 
  
-    return  "test>".$match[1];
+    return  "![](".$match[1].");
 }
 
 
