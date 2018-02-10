@@ -56,5 +56,33 @@
 			}
 		</script>
 		<?php endif; ?>
+
+
+				<!-- baidu XZH ld+jason -->
+		<?php if ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ): ?>
+		<script type="application/ld+json">
+		{
+		    "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+		    "@id": "<?php echo esc_url( get_permalink() ); ?>",
+		    "appid": "1591561973518570",
+		    "title": "<?php echo wp_title('', false); ?>",
+		    "images": ["<?php the_post_thumbnail_url(); ?>"],
+		    "description": "<?php
+		        if ($post->post_excerpt) {
+		            $printDescription = wp_strip_all_tags($post->post_excerpt);
+		                } else{
+		            $printDescription = preg_replace('/\s+/','',mb_strimwidth(strip_tags($post->post_content),0,120,''));
+		        }
+		        echo $printDescription;
+		        ?>",
+		    "pubDate": "<?php echo get_the_date('Y-m-d\TH:i:s'); ?>",
+		    "upDate": "<?php echo get_the_modified_date('Y-m-d\TH:i:s'); ?>"
+		}
+		</script>
+		<?php endif; ?>
+
+
+
+
 	</body>
 </html>
