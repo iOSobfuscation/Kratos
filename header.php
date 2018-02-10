@@ -30,6 +30,9 @@
 	</head>
 	<?php flush(); ?>
 	<body data-spy="scroll" data-target=".scrollspy">
+	<!-- 熊掌号 -->
+	<script>cambrian.render('head')</script>
+
 		<div id="kratos-wrapper">
 			<div id="kratos-page">
 				<div id="kratos-header">
