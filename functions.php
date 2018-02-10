@@ -1129,11 +1129,6 @@ function power_remove_row_actions( $actions )
 }
 
 
-/*
- * 自动保存草稿时间
- */
-define('AUTOSAVE_INTERVAL', 10 );
-
 
 
 

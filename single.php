@@ -69,6 +69,10 @@ get_header('banner'); ?>
 				               原文出处：周志鹏博客 <a title="<?php wp_title( '-', true, 'right' ); ?>" href="<?php echo  home_url(add_query_arg(array())); ?>"><?php echo  home_url(add_query_arg(array())); ?></a>
 			              </div>
 					</div>
+					<div class="kratos-hentry kratos-copyright text-center clearfix">
+						<script>cambrian.render('head')</script>
+
+					</div>
 					<?php endif; ?>
 					<nav class="navigation post-navigation clearfix" role="navigation">
 						<?php
