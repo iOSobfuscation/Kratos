@@ -24,6 +24,9 @@
 
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/favicon.ico'; ?>"  type="image/x-icon" />
 		<link rel="Bookmark" href="<?php echo get_template_directory_uri() . '/favicon.ico'; ?>" />
+
+		<script src="//msite.baidu.com/sdk/c.js?appid=1591561973518570"></script>
+
 	</head>
 	<?php flush(); ?>
 	<body data-spy="scroll" data-target=".scrollspy">
