@@ -70,7 +70,8 @@ get_header('banner'); ?>
 			              </div>
 					</div>
 					<div class="kratos-hentry kratos-copyright text-center clearfix">
-						<script>cambrian.render('head')</script>
+						<script>cambrian.render('tail')</script>
+                    
 
 					</div>
 					<?php endif; ?>
