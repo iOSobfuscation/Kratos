@@ -36,6 +36,16 @@ get_header('banner'); ?>
 							</div>
 						</header>
 						<div class="kratos-post-content">
+
+						<!-- 显示转载声明 -->
+						<blockquote>
+							<p>
+							  by <a href="https://blog.zhouzhipeng.com">zhouzhipeng</a> from <a href="<?php echo home_url(add_query_arg(array())) ?>"><?php echo home_url(add_query_arg(array())) ?></a><br>
+							  本文可全文转载，但需要保留原作者和出处。
+							</p>
+						</blockquote>
+
+
 						<?php if ( kratos_option('ad_show_1') ): ?>
 							<a href="<?php echo kratos_option('ad_link_1'); ?>"><img src="<?php echo kratos_option('ad_img_1')?>"></a>
 	                    <?php endif ?>
@@ -69,7 +79,7 @@ get_header('banner'); ?>
 				               原文出处：周志鹏博客 <a title="<?php wp_title( '-', true, 'right' ); ?>" href="<?php echo  home_url(add_query_arg(array())); ?>"><?php echo  home_url(add_query_arg(array())); ?></a>
 			              </div>
 					</div>
-					
+
 					<?php endif; ?>
 					<nav class="navigation post-navigation clearfix" role="navigation">
 						<?php
