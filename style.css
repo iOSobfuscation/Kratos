@@ -1820,10 +1820,10 @@ a.comment-reply-link:hover {
 }
 
 .photo-wrapper img {
-	margin: -50px 0 0;
-	max-height: 90px;
+	/*margin: -50px 0 0;*/
+	/*max-height: 90px;*/
 	border: rgba(255,255,255,.4) 4px solid;
-	border-radius: 50%
+	/*border-radius: 50%*/
 }
 
 .photo-background {
