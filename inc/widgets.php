@@ -107,13 +107,7 @@ class kratos_widget_about extends WP_Widget {
         $bkimgurl = $instance['bkimgurl'] ? $instance['bkimgurl'] : '';
         echo $before_widget;
         ?>
-                // <?php if(!empty($bkimgurl)) {?>
-                // <div class="photo-background">
-                //     <div class="photo-background" style="background:url(<?php echo $bkimgurl;?>) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"></div>
-                // </div>
-                // <?php }else{?>
-                // <div class="photo-background" style="background:url(<?php echo bloginfo('template_url'); ?>/images/about.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"></div>
-                // <?php }?>
+            
                 <?php if(!empty($imgurl)) {?>
                 <div class="photo-wrapper clearfix">
                     <div class="photo-wrapper-tip text-center">
